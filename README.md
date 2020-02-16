@@ -5,14 +5,14 @@ Emacs org mode library of babel
 
 To add this to your emacs, run
 
-~~~
-cd ~./.emacs.d/
+~~~shell
+cd ~/.emacs.d/
 git clone https://github.com/AlexStragies/library-of-babel
 ~~~
 
 Then, add this block to your emacs startup file:
 
-~~~
+~~~elisp
 (funcall (lambda (dir)
            (if (file-directory-p dir)
                (mapcar (lambda (file) (org-babel-lob-ingest file))
